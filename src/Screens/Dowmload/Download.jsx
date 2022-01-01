@@ -6,6 +6,8 @@ const Download = () => {
         <div className='w-screen h-screen bg-black'>
             {/* Navbar */}
             <Navbar title={'Downloads'} />
+
+
             <BottomTabBar />
         </div>
     )

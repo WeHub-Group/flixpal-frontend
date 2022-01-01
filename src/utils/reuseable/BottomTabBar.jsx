@@ -12,7 +12,8 @@ const BottomTabBar = () => {
 
 
     return (
-        <div className='fixed bottom-0 flex flex-row text-white justify-between items-center p-4 w-screen h-16 bg-purple text-xl'>
+        <div className='fixed bottom-0 flex flex-row text-white justify-between items-center p-4 w-screen h-16 bg-black border-t-darkGrey border-t-2 text-xl'>
+
             <img src={Home} alt=""
                 onClick={() => { navigate('/home') }}
                 className={location.pathname == '/home'
@@ -37,6 +38,7 @@ const BottomTabBar = () => {
                 className={location.pathname == '/more'
                     ? 'h-7 w-7 border-b-2 border-white p-1 rounded-xl' : 'h-4 w-4'
                 } />
+
         </div>
     )
 }
