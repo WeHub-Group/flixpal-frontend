@@ -1,4 +1,3 @@
-import { HiOutlineIdentification } from "react-icons/hi"
 import BottomTabBar from "../../utils/reuseable/BottomTabBar"
 import Searchbar from "../../utils/reuseable/Searchbar"
 import { FaBell } from "react-icons/fa"

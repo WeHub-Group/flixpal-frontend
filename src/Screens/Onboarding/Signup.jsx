@@ -30,10 +30,14 @@ const SignUp = () => {
         alert('google')
     }
 
-    function signupUser() {
+    function signupUser(e) {
+        e.preventDefault();
+
         // collect user details
         setIsLoading(true)
-        navigate('verifyemail/' + email)
+        setTimeout(() => {
+            navigate('verifyemail/' + email)
+        }, 1000);
 
     }
 
@@ -56,26 +60,29 @@ const SignUp = () => {
                     className="flex flex-col w-full gap-3"
                     onSubmit={signupUser}>
 
+                    {/* Email */}
                     <NormalInput
                         type={'email'}
                         placeholder={'Enter your Email'}
-                        icon={<FaTelegramPlane />}
                         value={email}
                         required={true}
-
-                        onError={() => { alert('error') }}
                         onChanged={(e) => { setEmail(e.target.value) }}
                     />
 
+
+                    {/* Password */}
                     <PasswordInput
                         placeholder={'Password'}
                         value={password}
                         required={true}
                         onChanged={(e) => { setPassword(e.target.value) }}
                     />
+
+                    {/* Confirm Password */}
                     <PasswordInput
                         placeholder={'Confirm Password'}
                         value={confirmPassword}
+                        required={true}
                         onChanged={(e) => { setConfirmPassword(e.target.value) }}
                     />
 
