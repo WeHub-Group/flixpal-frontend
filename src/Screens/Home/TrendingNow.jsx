@@ -1,16 +1,17 @@
 import Navbar from '../../utils/reuseable/Navbar'
 import { FaSearch } from 'react-icons/fa'
+import ScrollToLeft from '../../utils/animations/ScrollToLeft'
 
 const TrendingNow = () => {
     return (
-        <div className="bg-black h-screen w-screen">
+        <ScrollToLeft className="bg-black h-screen w-screen">
             <Navbar title={'Trending Now'}
                 extra={
                     <div> <FaSearch /> </div>
                 }
             />
 
-        </div>
+        </ScrollToLeft>
     )
 }
 

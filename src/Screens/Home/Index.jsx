@@ -16,7 +16,9 @@ const Index = () => {
                     </div>
 
                     <div className="flex flex-col ml-3">
-                        <p>Welcome back,</p>
+                        <p className="font-extrabold">
+                            Welcome back,
+                        </p>
                         <p>{12902292920}</p>
                     </div>
                 </div>
