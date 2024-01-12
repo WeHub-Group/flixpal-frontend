@@ -1,8 +1,10 @@
-# React + Vite
+# Flixpal Movie Download platform
+Please do not make any uploads to the main branch all upload should be made to a branch under your name for easier clarification
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
+- Fork the repo
+- run _npm install_
+- Begin work
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Development
+Please re-call that the Flixpal.com is a mobile first platform, so design for mobile
