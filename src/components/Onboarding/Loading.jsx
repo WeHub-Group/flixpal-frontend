@@ -14,7 +14,7 @@ const Loading = () => {
         <div className="w-screen h-screen bg-loadingPattern bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center">
 
             <div className="">
-                <img src="/src/assets/images/ICON 1.png" alt="Flixpal Icon" className="w-30 h-28" />
+                <img src="/assets/images/ICON 1.png" alt="Flixpal Icon" className="w-30 h-28" />
                 <Loader section={1} />
             </div>
         </div>
