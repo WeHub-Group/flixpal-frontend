@@ -13,7 +13,11 @@ const Loading2 = () => {
             className='w-screen h-screen bg-black flex flex-col'>
 
 
-            <img src={groupImage} className="h-[45%] blur-0 w-full" alt="" />
+            <motion.img
+                initial={{ scale: 3, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'tween', duration: 1 }}
+                src={groupImage} className="h-[45%] blur-0 w-full" alt="" />
 
             <div className="h-[55%] w-full flex flex-col justify-evenly gap-2 p-4">
                 <Loader section={2} />
