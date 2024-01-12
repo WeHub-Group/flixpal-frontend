@@ -1,7 +1,9 @@
 import Loader from "../../components/utils/Loader";
 import groupImage from '../../assets/images/loading2group.png'
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import CustomButton from "../utils/CustomButton";
+
 
 
 const Loading2 = () => {
@@ -29,7 +31,7 @@ const Loading2 = () => {
                 </p>
                 <p className="text-[#797979] font-kanit text-sm text-center">Stream Flixpal from any location. <br />    Cancel anytime.</p>
 
-                <Link to={'/3'} className="bg-purple p-3 font-kanit text-white uppercase font-semibold rounded-lg text-center">Next</Link>
+                <CustomButton text={'Next'} onPressed={() => { navigate('/3') }} />
             </div>
 
 

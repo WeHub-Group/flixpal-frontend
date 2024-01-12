@@ -62,8 +62,8 @@ const Loading2 = () => {
 
                     <CustomButton text={'SIGN IN WITH PASSWORD'} onPressed={goToSignInPage} />
 
-                    <p className="text-sm text-white text-center">Don&apos;t have an account?
-                        <a href="#" className="text-purple">Sign Up</a></p>
+                    <p className="text-sm text-white text-center font-extrabold">
+                        Don&apos;t have an account? <a href="#" className="text-purple">Sign Up</a></p>
                 </motion.div>
 
             </div>
