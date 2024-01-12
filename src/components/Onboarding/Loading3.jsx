@@ -1,10 +1,14 @@
 import Loader from "../../components/utils/Loader";
 import groupImage from '../../assets/images/loading3.png'
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import CustomButton from "../utils/CustomButton";
 
 
 const Loading3 = () => {
+    const navigate = useNavigate()
+
+
     return (
         <motion.div
             initial={{ x: 50 }}
@@ -22,12 +26,12 @@ const Loading3 = () => {
 
                 <div className="h-[55%] w-full flex justify-evenly flex-col gap-2 p-4">
                     <Loader section={3} />
-                    <p className="text-white font-kanit text-4xl text-center font-bold">
+                    <p className="text-white  text-4xl text-center font-bold">
                         Experience movies and TV in Virtual Reality.
                     </p>
-                    <p className="text-[#797979] font-kanit text-sm text-center">Stream Flixpal from any location. <br />    Cancel anytime.</p>
+                    <p className="text-[#797979]  text-sm text-center">Stream Flixpal from any location. <br />    Cancel anytime.</p>
 
-                    <Link className="bg-purple p-3 font-kanit text-white uppercase font-semibold rounded-lg text-center">Next</Link>
+                    <CustomButton text={'Next'} onPressed={() => { navigate('/4') }} />
                 </div>
             </div>
 
