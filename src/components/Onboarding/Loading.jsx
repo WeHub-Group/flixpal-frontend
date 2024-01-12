@@ -1,5 +1,5 @@
-import Loader from "../utils/loader"
 import { useNavigate } from "react-router-dom";
+import Loader from "../utils/loader";
 
 
 const Loading = () => {
