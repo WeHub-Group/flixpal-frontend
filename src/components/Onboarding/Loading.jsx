@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Loader from "../utils/loader";
+// import Loader from "../utils/loader";
 
 
 const Loading = () => {
@@ -15,7 +15,7 @@ const Loading = () => {
 
             <div className="">
                 <img src="/src/assets/images/ICON 1.png" alt="Flixpal Icon" className="w-30 h-28" />
-                <Loader section={1} />
+                {/* <Loader section={1} /> */}
             </div>
         </div>
     )
