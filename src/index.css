@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< Updated upstream
 @tailwind utilities;
+=======
+@tailwind utilities;
+
+#root {
+    @apply bg-black;
+    font-family: 'Kanit';
+}
+
+@font-face {
+    font-family: Kanit;
+    src: url('./assets/fonts/Kanit/Kanit-Regular.ttf');
+}
+>>>>>>> Stashed changes
