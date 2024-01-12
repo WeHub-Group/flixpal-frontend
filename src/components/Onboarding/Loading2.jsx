@@ -1,4 +1,6 @@
-import Loader from "../utils/loader"
+// import Loader from "../utils/loader"
+
+
 
 const Loading2 = () => {
     return (
@@ -6,7 +8,7 @@ const Loading2 = () => {
             <img src="/src/assets/images/loading2group.png" className="h-[50%] w-full" alt="" />
 
             <div className="h-[50%] w-full">
-                <Loader section={2} />
+                {/* <Loader section={2} /> */}
             </div>
         </div>
     )
