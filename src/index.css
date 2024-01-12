@@ -4,6 +4,7 @@
 
 #root {
     @apply bg-black;
+    font-family: 'Kanit';
 }
 
 @font-face {
