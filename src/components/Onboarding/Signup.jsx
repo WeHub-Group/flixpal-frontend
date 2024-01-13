@@ -11,8 +11,8 @@ const SignUp = () => {
 
     // I do not know how to use react-forms sorry
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
+    const [password, setPassword] = useState()
+    const [confirmPassword, setConfirmPassword] = useState()
 
 
     return (
@@ -22,7 +22,7 @@ const SignUp = () => {
             <div className="w-full flex flex-col gap-4">
                 <p className="text-white text-4xl text-center">Create your <br /> Account</p>
 
-                <form className="flex flex-col w-full gap-3" onSubmit={(e) => { alert('hello'), e.preventDefault() }}>
+                <form className="flex flex-col w-full gap-3" onSubmit={() => { alert('hello') }}>
                     <NormalInput
                         type={'email'}
                         O placeholder={'Enter your Email'}

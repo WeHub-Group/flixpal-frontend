@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
+// Utils
 import BackButton from "../../components/utils/BackButton";
 import AuthButton from "../utils/AuthButtons";
 
@@ -7,7 +10,6 @@ import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 import CustomButton from "../utils/CustomButton";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -26,7 +28,7 @@ const Loading2 = () => {
     }
 
     function goToSignInPage() {
-        alert('i was clicked')
+        alert('I was clicked')
     }
 
     return (
@@ -62,8 +64,8 @@ const Loading2 = () => {
 
                     <CustomButton text={'SIGN IN WITH PASSWORD'} onPressed={goToSignInPage} />
 
-                    <p className="text-sm text-white text-center">Don&apos;t have an account?
-                        <a href="#" className="text-purple">Sign Up</a></p>
+                    <p className="text-sm text-white text-center font-extrabold">
+                        Don&apos;t have an account? <a href="/signup" className="text-purple">Sign Up</a></p>
                 </motion.div>
 
             </div>

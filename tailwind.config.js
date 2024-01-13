@@ -14,15 +14,8 @@ export default {
       },
       backgroundImage: {
         loadingPattern: "url('/src/assets/images/welcome.png')",
-<<<<<<< Updated upstream
-        linearGradient: "linear-gradient(180deg, rgba(15, 16, 16, 0.80) 0%, rgba(15, 16, 16, 0.80) 34.9%, #0F1010 100%)"
-=======
         loading4Pattern: "url('/src/assets/images/landing4.png')",
-        linearGradient: "linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.70) 40%,rgba(0, 0, 0, 1) 100%)"
-      },
-      fontFamily: {
-        kanit: 'Kanit'
->>>>>>> Stashed changes
+        linearGradient: "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%)"
       }
     },
   },
