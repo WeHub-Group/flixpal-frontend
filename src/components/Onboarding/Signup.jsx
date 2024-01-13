@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BackButton from "../../components/utils/BackButton";
+import CustomButton from "../../components/utils/CustomButton";
 import NormalInput from "../utils/NormaInput";
 import { FaTelegramPlane } from "react-icons/fa";
 import PasswordInput from "../utils/PasswordInput";
@@ -21,7 +22,7 @@ const SignUp = () => {
             <div className="w-full flex flex-col gap-4">
                 <p className="text-white text-4xl text-center">Create your <br /> Account</p>
 
-                <div className="flex flex-col w-full gap-3">
+                <form className="flex flex-col w-full gap-3" onSubmit={() => { alert('hello') }}>
                     <NormalInput
                         type={'email'}
                         O placeholder={'Enter your Email'}
@@ -33,25 +34,30 @@ const SignUp = () => {
                     <PasswordInput
                         placeholder={'Password'}
                         value={password}
-                        onChanged={(e) => { setPassword(e.target.value), console.log(password); }}
+                        required={true}
+                        onChanged={(e) => { setPassword(e.target.value) }}
                     />
                     <PasswordInput
                         placeholder={'Confirm Password'}
                         value={confirmPassword}
-                        onChanged={(e) => { setConfirmPassword(e.target.value), console.log(password); }}
+                        onChanged={(e) => { setConfirmPassword(e.target.value) }}
                     />
-                </div>
+
+                    <div className="flex flex-row gap-3 items-center">
+                        <input type="checkbox" className="accent-purple h-4 w-4" />
+                        <p className="text-sm text-white">Remember me</p>
+                    </div>
+
+                    <CustomButton type='submit' text={'Create Account'} />
+                </form>
 
 
-                <div className="flex flex-row gap-3 items-center">
-                    <input type="checkbox" className="accent-purple" />
-                    <p className="text-sm text-white">Remember me</p>
-                </div>
+
             </div>
 
 
 
-        </div>
+        </div >
     )
 }
 

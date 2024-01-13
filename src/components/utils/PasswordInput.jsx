@@ -6,7 +6,7 @@ import hidden from "../../assets/svg/eye_slash.svg";
 
 
 
-const PasswordInput = ({ placeholder, value, onChanged }) => {
+const PasswordInput = ({ placeholder, value, onChanged, ...props }) => {
 
     const [isPassword, setIsPassword] = useState()
 
@@ -21,6 +21,7 @@ const PasswordInput = ({ placeholder, value, onChanged }) => {
                 placeholder={placeholder}
                 value={value}
                 onChange={onChanged}
+                {...props}
                 className='bg-transparent outline-none text-sm text-white' />
 
             <img src={isPassword ? hidden : visible} onClick={() => { setIsPassword(!isPassword) }} />
