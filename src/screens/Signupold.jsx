@@ -1,6 +1,6 @@
 
 
-const Signup = () => {
+const Signupold = () => {
     return (
         <div className="w-screen h-screen bg-black">
 
@@ -8,4 +8,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signupold
