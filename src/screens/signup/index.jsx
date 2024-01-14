@@ -125,7 +125,7 @@ const SignUp = () => {
 
                        <button className='btn btn-primary' style={{maxWidth: '200px', borderRadius: '8px'}} onClick={handleNext}>Explore Now</button>
                     </div>
-                    <div className='absolute bottom-0 left-0 flex justify-center w-full gap-4'>
+                    <div className='absolute bottom-4 left-0 flex justify-center w-full gap-4'>
                         <button className='btn btn-secondary'>skip</button>
                         <button className='btn btn-primary'>continue!</button>
                     </div>
