@@ -9,6 +9,7 @@ import Loading2 from './components/Onboarding/Loading2'
 import Loading3 from './components/Onboarding/Loading3'
 import Loading4 from './components/Onboarding/Loading4'
 import SignUp from './components/Onboarding/Signup'
+import VerifyEmail from './components/Onboarding/VerifyEmail'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,7 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='4' element={<Loading4 />} />
       </Route>
 
-      <Route path='/signup' element={<SignUp />} />
+      <Route path='/signup'>
+        <Route index element={<SignUp />} />
+        <Route path='verifyemail' element={<VerifyEmail />} />
+      </Route>
 
 
     </Routes>

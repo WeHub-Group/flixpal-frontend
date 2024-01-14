@@ -5,15 +5,33 @@ import NormalInput from "../utils/NormaInput";
 import { FaTelegramPlane } from "react-icons/fa";
 import PasswordInput from "../utils/PasswordInput";
 import { motion } from "framer-motion";
+import AuthTags from "../utils/AuthTags";
 
+import FacebookIcon from "../../assets/images/facebook.png";
+import GoogleIcon from "../../assets/images/google.png";
+import AppleIcon from "../../assets/images/apple.png";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
+    const navigate = useNavigate()
 
     // I do not know how to use react-forms sorry
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState()
     const [confirmPassword, setConfirmPassword] = useState()
+
+    function loginWithFacebook() {
+        alert('facebook')
+    }
+
+    function loginWithGoogle() {
+        alert('google')
+    }
+    function loginWithAppleId() {
+        alert('apple')
+    }
+
 
 
     return (
@@ -27,7 +45,13 @@ const SignUp = () => {
             <div className="w-full flex flex-col gap-4">
                 <p className="text-white text-4xl text-center">Create your <br /> Account</p>
 
-                <form className="flex flex-col w-full gap-3" onSubmit={() => { alert('hello') }}>
+                <motion.form
+                    initial={{ y: 40, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ type: 'tween', duration: 1 }}
+                    className="flex flex-col w-full gap-3"
+                    onSubmit={() => { navigate('/verifyemail') }}>
+
                     <NormalInput
                         type={'email'}
                         placeholder={'Enter your Email'}
@@ -63,7 +87,16 @@ const SignUp = () => {
                         <p className="uppercase text-min w-[130%] text-center">or continue with</p>
                         <hr className="w-full" />
                     </div>
-                </form>
+
+                    <div className="flex flex-row gap-2 justify-center items-center">
+                        <AuthTags icon={FacebookIcon} onPressed={loginWithFacebook} />
+                        <AuthTags icon={GoogleIcon} onPressed={loginWithGoogle} />
+                        <AuthTags icon={AppleIcon} onPressed={loginWithAppleId} />
+                    </div>
+
+                    <p className="text-sm text-white text-center font-extrabold">
+                        Have an account? <Link to={"#"} className="text-purple">Sign In</Link></p>
+                </motion.form>
 
 
 
