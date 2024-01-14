@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Utils
 import BackButton from "../../components/utils/BackButton";
@@ -65,7 +65,7 @@ const Loading2 = () => {
                     <CustomButton text={'SIGN IN WITH PASSWORD'} onPressed={goToSignInPage} />
 
                     <p className="text-sm text-white text-center font-extrabold">
-                        Don&apos;t have an account? <a href="/signup" className="text-purple">Sign Up</a></p>
+                        Don&apos;t have an account? <Link to={"/signup"} className="text-purple">Sign Up</Link></p>
                 </motion.div>
 
             </div>

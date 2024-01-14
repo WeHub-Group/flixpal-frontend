@@ -4,6 +4,7 @@ import CustomButton from "../../components/utils/CustomButton";
 import NormalInput from "../utils/NormaInput";
 import { FaTelegramPlane } from "react-icons/fa";
 import PasswordInput from "../utils/PasswordInput";
+import { motion } from "framer-motion";
 
 
 
@@ -16,7 +17,11 @@ const SignUp = () => {
 
 
     return (
-        <div className="w-screen h-screen bg-black flex justify-content items-center p-5">
+        <motion.div
+            initial={{ x: 50 }}
+            animate={{ x: 0 }}
+            transition={{ type: 'tween', duration: 0.2 }}
+            className="w-screen h-screen bg-black flex justify-content items-center p-5">
             <BackButton />
 
             <div className="w-full flex flex-col gap-4">
@@ -25,9 +30,12 @@ const SignUp = () => {
                 <form className="flex flex-col w-full gap-3" onSubmit={() => { alert('hello') }}>
                     <NormalInput
                         type={'email'}
-                        O placeholder={'Enter your Email'}
+                        placeholder={'Enter your Email'}
                         icon={<FaTelegramPlane />}
                         value={email}
+                        required={true}
+
+                        onError={() => { alert('error') }}
                         onChanged={(e) => { setEmail(e.target.value) }}
                     />
 
@@ -49,6 +57,12 @@ const SignUp = () => {
                     </div>
 
                     <CustomButton type='submit' text={'Create Account'} />
+
+                    <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">
+                        <hr className="w-full" />
+                        <p className="uppercase text-min w-[130%] text-center">or continue with</p>
+                        <hr className="w-full" />
+                    </div>
                 </form>
 
 
@@ -57,7 +71,7 @@ const SignUp = () => {
 
 
 
-        </div >
+        </motion.div >
     )
 }
 

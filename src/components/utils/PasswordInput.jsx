@@ -8,21 +8,22 @@ import hidden from "../../assets/svg/eye_slash.svg";
 
 const PasswordInput = ({ placeholder, value, onChanged, ...props }) => {
 
-    const [isPassword, setIsPassword] = useState()
+    const [isPassword, setIsPassword] = useState(true)
 
     return (
 
-
-        <div className="w-full p-3 rounded-lg bg-[#272828] flex flex-row justify-between gap-3 items-center">
-            <img src={padlockIcon} />
-            <input
-                type={isPassword ? 'password' : 'text'}
-                autoComplete=''
-                placeholder={placeholder}
-                value={value}
-                onChange={onChanged}
-                {...props}
-                className='bg-transparent outline-none text-sm text-white' />
+        <div className="w-full p-3 rounded-lg bg-[#272828] flex flex-row  items-center justify-between">
+            <div className="flex flex-row gap-3">
+                <img src={padlockIcon} />
+                <input
+                    type={isPassword ? 'password' : 'text'}
+                    autoComplete=''
+                    placeholder={placeholder}
+                    value={value}
+                    onChange={onChanged}
+                    {...props}
+                    className='bg-transparent outline-none text-sm text-white ' />
+            </div>
 
             <img src={isPassword ? hidden : visible} onClick={() => { setIsPassword(!isPassword) }} />
         </div>

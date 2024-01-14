@@ -6,11 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        min: '0.75rem'/* 14px */
+      },
       colors: {
         purple: '#800080',
         black: '#16161c',
         white: '#ffffff',
-        grey: '#D9D9D9'
+        grey: '#D9D9D9',
+        inputBackground: '#272828'
       },
       backgroundImage: {
         loadingPattern: "url('/src/assets/images/welcome.png')",
