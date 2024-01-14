@@ -50,7 +50,7 @@ const SignUp = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: 'tween', duration: 1 }}
                     className="flex flex-col w-full gap-3"
-                    onSubmit={() => { navigate('/verifyemail') }}>
+                    onSubmit={() => { navigate('verifyemail') }}>
 
                     <NormalInput
                         type={'email'}
