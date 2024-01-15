@@ -1,13 +1,20 @@
 /* eslint-disable react/prop-types */
+import NotFoundImage from '../../assets/svg/notfound.svg'
 
-const NotFound = ({ fullscreen }) => {
+
+// Notfound can take in either "screen","full" or "[10vh]" as parameters
+
+
+const NotFound = ({ height, width, message }) => {
+
+    const fullscreenClass =
+        `w-${width} h-${height} bg-screen bg-black flex flex-col justify-center items-center`
+
     return (
-        <div className={
-            fullscreen ?
-                'w-screen h-screen bg-screen bg-purple flex justify-center items-center' :
-                'w-full h-full bg-screen bg-purple flex justify-center items-center'
-        }>
-            <p>404 - Not found</p>
+        <div className={fullscreenClass}>
+            <img src={NotFoundImage} className='h-[30%] w-[35%]' />
+            <p className="text-center text-2xl text-white"><span className='text-purple'>Oops!</span>Unable to locate</p>
+            <p className='text-white text-center p-3'>{message}</p>
         </div>
     )
 }

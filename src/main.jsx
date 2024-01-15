@@ -32,7 +32,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Route>
 
       {/* 404 Route */}
-      <Route path='*' element={<NotFound fullscreen={true} />} />
+      <Route path='*'
+        element={<NotFound
+          height={'screen'}
+          width={'screen'}
+          message={'Apologies, the entered keyword cannot be located. Please double-check or attempt a search using different keywords.'} />} />
 
     </Routes>
   </BrowserRouter>,
