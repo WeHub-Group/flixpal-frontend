@@ -2,12 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-    @apply bg-black;
-    font-family: 'Kanit';
-}
-
 @font-face {
     font-family: Kanit;
-    src: url('./assets/fonts/Kanit/Kanit-Regular.ttf');
+    src: url(../src/assets/fonts/Kanit-Regular.ttf);
+  }
+
+.main-body{
+    height: 100dvh;
+    width: 100dvw;
+    padding: 24px;
+    height: 100vh;
+    width: 100vw;
+}
+
+*{
+    background-color:black;
+    font-family: Kanit;
+    font-weight: 400;
+}
+
+.btn{
+    border-radius: 12px;
+    width: 100%;
+    padding: 15px 24px;
+    color: var(--neutral-white-high-emp, #fff);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Kanit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary{
+    background: #800080;
+}
+.btn-primary:hover{
+    background: #b200b2;
+}
+.btn-primary:active{
+    background: #3c003c;
+}
+
+.btn-secondary{
+    background: #fff;
+    color: #800080;
+}
+.btn-secondary:hover{
+    background: #bdbdbd;
+    color: #fff;
+}
+.btn-secondary:active{
+    background: #6c6c6c;
+    color: #fff;
 }

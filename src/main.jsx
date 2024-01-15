@@ -1,5 +1,6 @@
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import SignUp from './screens/signup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
