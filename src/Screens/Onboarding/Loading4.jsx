@@ -29,7 +29,7 @@ const Loading2 = () => {
     }
 
     function goToSignInPage() {
-        alert('I was clicked')
+        navigate('/login')
     }
 
     return (

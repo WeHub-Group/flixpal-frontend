@@ -4,14 +4,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 
-import Loading from './components/Onboarding/Loading'
-import Loading2 from './components/Onboarding/Loading2'
-import Loading3 from './components/Onboarding/Loading3'
-import Loading4 from './components/Onboarding/Loading4'
-import SignUp from './components/Onboarding/Signup'
-import VerifyEmail from './components/Onboarding/VerifyEmail'
-import NotFound from './components/NotFound/NotFound'
-import AllSet from './components/Onboarding/AllSet'
+import Loading from './Screens/Onboarding/Loading'
+import Loading2 from './Screens/Onboarding/Loading2'
+import Loading3 from './Screens/Onboarding/Loading3'
+import Loading4 from './Screens/Onboarding/Loading4'
+import SignUp from './Screens/Onboarding/Signup'
+import VerifyEmail from './Screens/Onboarding/VerifyEmail'
+import NotFound from './Screens/NotFound/NotFound'
+import AllSet from './Screens/Onboarding/AllSet'
+import Login1 from './Screens/Login/Login1'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -32,6 +33,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route index element={<SignUp />} />
         <Route path='verifyemail' element={<VerifyEmail />} />
         <Route path='verifyemail/allset' element={<AllSet />} />
+      </Route>
+
+      <Route path='/login'>
+        <Route index element={<Login1 />} />
       </Route>
 
 

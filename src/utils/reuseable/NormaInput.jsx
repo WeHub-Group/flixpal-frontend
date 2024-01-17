@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import sendIcon from '../../assets/svg/Send_fill.svg'
 
-const NormalInput = ({ icon, type, placeholder, value, onChanged, ...props }) => {
+const NormalInput = ({ type, placeholder, value, onChanged, ...props }) => {
     return (
         <div className='w-full p-3 rounded-lg bg-inputBackground flex flex-row gap-3 items-center'>
             <img src={sendIcon} className="text-white bg-none text-lg h-6 w-6" />

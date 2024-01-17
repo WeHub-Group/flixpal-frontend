@@ -1,25 +1,22 @@
-import { useState } from "react";
-import BackButton from "../../utils/reuseable/BackButton";
-import CustomButton from "../../utils/reuseable/CustomButton";
-import NormalInput from "../../utils/reuseable/NormaInput";
-import { FaTelegramPlane } from "react-icons/fa";
-import PasswordInput from "../../utils/reuseable/PasswordInput";
-import { motion } from "framer-motion";
-import AuthTags from "../../utils/reuseable/AuthTags";
+import ScrollToLeft from '../../utils/animations/ScrollToLeft'
+import BackButton from '../../utils/reuseable/BackButton'
 
+import CustomButton from "../../utils/reuseable/CustomButton";
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import NormalInput from '../../utils/reuseable/NormaInput';
+import PasswordInput from '../../utils/reuseable/PasswordInput';
+import { useState } from 'react';
+import AuthTags from '../../utils/reuseable/AuthTags';
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
-import { Link, useNavigate } from "react-router-dom";
 
-
-const SignUp = () => {
+const Login1 = () => {
     const navigate = useNavigate()
-
-    // I do not know how to use react-forms sorry
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState()
-    const [confirmPassword, setConfirmPassword] = useState()
+    const [password, setPassword] = useState('')
 
     function loginWithFacebook() {
         alert('facebook')
@@ -32,33 +29,28 @@ const SignUp = () => {
         alert('apple')
     }
 
-
-
+    function goToSignInPage() {
+        navigate('/login')
+    }
     return (
-        <motion.div
-            initial={{ x: 50 }}
-            animate={{ x: 0 }}
-            transition={{ type: 'tween', duration: 0.2 }}
-            className="w-screen h-screen bg-black flex justify-content items-center p-5">
+        <ScrollToLeft className='w-screen h-screen flex flex-col bg-loginPattern bg-center bg-cover bg-no-repeat'>
             <BackButton />
 
-            <div className="w-full flex flex-col gap-4">
-                <p className="text-white text-4xl text-center">Create your <br /> Account</p>
 
-                <motion.form
+
+            <div className="w-full h-full bg-linearGradient">
+                <motion.div
                     initial={{ y: 40, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: 'tween', duration: 1 }}
-                    className="flex flex-col w-full gap-3"
-                    onSubmit={() => { navigate('verifyemail') }}>
+                    className="absolute bottom-0 flex flex-col gap-3 w-full p-5">
+                    <p className="text-white text-4xl text-center font-extrabold">Login to your account</p>
 
                     <NormalInput
                         type={'email'}
                         placeholder={'Enter your Email'}
-                        icon={<FaTelegramPlane />}
                         value={email}
                         required={true}
-
                         onError={() => { alert('error') }}
                         onChanged={(e) => { setEmail(e.target.value) }}
                     />
@@ -69,18 +61,15 @@ const SignUp = () => {
                         required={true}
                         onChanged={(e) => { setPassword(e.target.value) }}
                     />
-                    <PasswordInput
-                        placeholder={'Confirm Password'}
-                        value={confirmPassword}
-                        onChanged={(e) => { setConfirmPassword(e.target.value) }}
-                    />
 
                     <div className="flex flex-row gap-3 items-center">
                         <input type="checkbox" className="accent-purple h-4 w-4" />
                         <p className="text-sm text-white">Remember me</p>
                     </div>
 
-                    <CustomButton type='submit' text={'Create Account'} />
+                    <CustomButton text={'Login'} onPressed={goToSignInPage} />
+
+                    <p className="text-purple text-lg text-center">Forgot Password?</p>
 
                     <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">
                         <hr className="w-full" />
@@ -95,17 +84,13 @@ const SignUp = () => {
                     </div>
 
                     <p className="text-sm text-white text-center font-extrabold">
-                        Have an account? <Link to={"/login"} className="text-purple">Sign In</Link></p>
-                </motion.form>
-
-
+                        Don&apos;t have an account? <Link to={"/signup"} className="text-purple">Sign Up</Link></p>
+                </motion.div>
 
             </div>
 
-
-
-        </motion.div >
+        </ScrollToLeft>
     )
 }
 
-export default SignUp
+export default Login1

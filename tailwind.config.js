@@ -19,6 +19,7 @@ export default {
       },
       backgroundImage: {
         loadingPattern: "url('/src/assets/images/welcome.png')",
+        loginPattern: "url('/src/assets/images/login.jpg')",
         loading4Pattern: "url('/src/assets/images/landing4.png')",
         linearGradient: "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%)"
       }
