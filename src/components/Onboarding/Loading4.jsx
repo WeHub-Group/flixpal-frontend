@@ -10,6 +10,7 @@ import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 import CustomButton from "../utils/CustomButton";
+import ScrollToLeft from "../animations/ScrollToLeft";
 
 
 
@@ -32,10 +33,7 @@ const Loading2 = () => {
     }
 
     return (
-        <motion.div
-            initial={{ x: 50 }}
-            animate={{ x: 0 }}
-            transition={{ type: 'tween', duration: 0.2 }}
+        <ScrollToLeft
             className='w-screen h-screen flex flex-col bg-loading4Pattern bg-center bg-cover bg-no-repeat'>
 
             <div className="w-full h-full bg-linearGradient">
@@ -65,12 +63,12 @@ const Loading2 = () => {
                     <CustomButton text={'SIGN IN WITH PASSWORD'} onPressed={goToSignInPage} />
 
                     <p className="text-sm text-white text-center font-extrabold">
-                        Don&apos;t have an account? <Link to={"/signup"} className="text-purple">Sign Up</Link></p>
+                        Don&apos;t have an account? <Link to={"/signin"} className="text-purple">Sign In</Link></p>
                 </motion.div>
 
             </div>
 
-        </motion.div >
+        </ScrollToLeft>
     )
 }
 export default Loading2

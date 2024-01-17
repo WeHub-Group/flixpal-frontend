@@ -2,6 +2,7 @@ import BackButton from "../utils/BackButton"
 import VerifyIcon from '../../assets/svg/verify.svg';
 import CustomButton from "../utils/CustomButton";
 import { useNavigate } from "react-router";
+import ScrollToLeft from "../animations/ScrollToLeft";
 
 const VerifyEmail = () => {
     const navigate = useNavigate()
@@ -12,7 +13,7 @@ const VerifyEmail = () => {
 
 
     return (
-        <div className="w-screen h-screen bg-black flex flex-col justify-center items-center p-5">
+        <ScrollToLeft className="w-screen h-screen bg-black flex flex-col justify-center items-center p-5">
             <BackButton />
 
 
@@ -39,7 +40,7 @@ const VerifyEmail = () => {
                 <CustomButton text={'Verify'} onPressed={verifyEmail} />
             </div>
 
-        </div>
+        </ScrollToLeft>
     )
 }
 
