@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import icon from "../../assets/images/ICON 1.png"
-import Loader from "../../components/utils/Loader";
+import Loader from "../../utils/reuseable/Loader";
 
 
 const Loading = () => {

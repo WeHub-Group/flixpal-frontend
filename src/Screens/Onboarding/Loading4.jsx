@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 
 // Utils
-import BackButton from "../../components/utils/BackButton";
-import AuthButton from "../utils/AuthButtons";
+import BackButton from "../../utils/reuseable/BackButton";
+import AuthButton from "../../utils/reuseable/AuthButtons";
 
 // Importing images instead
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
-import CustomButton from "../utils/CustomButton";
-import ScrollToLeft from "../animations/ScrollToLeft";
+import CustomButton from "../../utils/reuseable/CustomButton";
+import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 
 
 
@@ -63,7 +63,7 @@ const Loading2 = () => {
                     <CustomButton text={'SIGN IN WITH PASSWORD'} onPressed={goToSignInPage} />
 
                     <p className="text-sm text-white text-center font-extrabold">
-                        Don&apos;t have an account? <Link to={"/signin"} className="text-purple">Sign In</Link></p>
+                        Don&apos;t have an account? <Link to={"/signup"} className="text-purple">Sign Up</Link></p>
                 </motion.div>
 
             </div>

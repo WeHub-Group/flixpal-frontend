@@ -1,8 +1,8 @@
-import Loader from "../../components/utils/Loader";
+import Loader from "../../utils/reuseable/Loader";
 import groupImage from '../../assets/images/loading3.png'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../utils/CustomButton";
+import CustomButton from "../../utils/reuseable/CustomButton";
 
 
 const Loading3 = () => {

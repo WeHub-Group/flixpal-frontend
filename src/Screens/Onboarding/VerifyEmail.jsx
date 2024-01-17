@@ -1,8 +1,8 @@
-import BackButton from "../utils/BackButton"
+import BackButton from "../../utils/reuseable/BackButton"
 import VerifyIcon from '../../assets/svg/verify.svg';
-import CustomButton from "../utils/CustomButton";
+import CustomButton from "../../utils/reuseable/CustomButton";
 import { useNavigate } from "react-router";
-import ScrollToLeft from "../animations/ScrollToLeft";
+import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 
 const VerifyEmail = () => {
     const navigate = useNavigate()

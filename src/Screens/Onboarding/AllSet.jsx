@@ -1,9 +1,9 @@
-import BackButton from "../utils/BackButton"
+import BackButton from "../../utils/reuseable/BackButton"
 import AllSetIcon from '../../assets/svg/all set.svg';
-import CustomButton from "../utils/CustomButton";
+import CustomButton from "../../utils/reuseable/CustomButton";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
-import ScrollToLeft from "../animations/ScrollToLeft";
+import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 
 
 const AllSet = () => {

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import BackButton from "../../components/utils/BackButton";
-import CustomButton from "../../components/utils/CustomButton";
-import NormalInput from "../utils/NormaInput";
+import BackButton from "../../utils/reuseable/BackButton";
+import CustomButton from "../../utils/reuseable/CustomButton";
+import NormalInput from "../../utils/reuseable/NormaInput";
 import { FaTelegramPlane } from "react-icons/fa";
-import PasswordInput from "../utils/PasswordInput";
+import PasswordInput from "../../utils/reuseable/PasswordInput";
 import { motion } from "framer-motion";
-import AuthTags from "../utils/AuthTags";
+import AuthTags from "../../utils/reuseable/AuthTags";
 
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
