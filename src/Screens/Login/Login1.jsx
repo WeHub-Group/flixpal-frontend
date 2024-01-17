@@ -14,12 +14,12 @@ import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 
 const Login1 = () => {
-    const [hasLoggedIn, setHasLoggedIn] = useState(true)
+    const [hasLoggedIn, setHasLoggedIn] = useState(false)
+
 
     return (
         <div className="">
-            {hasLoggedIn &&
-                <LoginDone />}
+            {hasLoggedIn ? <LoginDone /> : <LoginForm />}
         </div>
     )
 }
@@ -29,7 +29,7 @@ function LoginDone({ username }) {
     const navigate = useNavigate()
 
     setTimeout(() => {
-        navigate('/')
+        navigate('#')
     }, 2500);
 
     return (
@@ -38,6 +38,9 @@ function LoginDone({ username }) {
         </div>
     )
 }
+
+
+
 
 
 function LoginForm() {
@@ -59,6 +62,8 @@ function LoginForm() {
     function goToSignInPage() {
         navigate('/login')
     }
+
+
     return (
         <ScrollToLeft className='w-screen h-screen flex flex-col bg-loginPattern bg-center bg-cover bg-no-repeat'>
             <BackButton />
@@ -96,7 +101,7 @@ function LoginForm() {
 
                     <CustomButton text={'Login'} onPressed={goToSignInPage} />
 
-                    <p className="text-purple text-lg text-center">Forgot Password?</p>
+                    <Link to={'forgotpassword'} className="text-purple text-lg text-center">Forgot Password?</Link>
 
                     <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">
                         <hr className="w-full" />

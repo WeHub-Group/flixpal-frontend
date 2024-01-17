@@ -13,6 +13,7 @@ import VerifyEmail from './Screens/Onboarding/VerifyEmail'
 import NotFound from './Screens/NotFound/NotFound'
 import AllSet from './Screens/Onboarding/AllSet'
 import Login1 from './Screens/Login/Login1'
+import ForgotPassword from './Screens/ForgotPassword/ForgotPassword'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -28,15 +29,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Route>
 
 
-      {/* Signup routes */}
+      {/* Signup and Verify Email routes */}
       <Route path='/signup'>
         <Route index element={<SignUp />} />
         <Route path='verifyemail' element={<VerifyEmail />} />
         <Route path='verifyemail/allset' element={<AllSet />} />
       </Route>
 
+
+      {/* Login and Forgot Password routes */}
       <Route path='/login'>
         <Route index element={<Login1 />} />
+        <Route path='forgotpassword' element={<ForgotPassword />} />
       </Route>
 
 
