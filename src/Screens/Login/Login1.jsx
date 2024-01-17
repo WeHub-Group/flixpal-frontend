@@ -14,6 +14,33 @@ import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 
 const Login1 = () => {
+    const [hasLoggedIn, setHasLoggedIn] = useState(true)
+
+    return (
+        <div className="">
+            {hasLoggedIn &&
+                <LoginDone />}
+        </div>
+    )
+}
+
+
+function LoginDone({ username }) {
+    const navigate = useNavigate()
+
+    setTimeout(() => {
+        navigate('/')
+    }, 2500);
+
+    return (
+        <div className="bg-black w-screen h-screen flex justify-center items-center">
+            <p className="text-white text-4xl text-center">Welcome back {username}! <br /> Glad to see you, Again!</p>
+        </div>
+    )
+}
+
+
+function LoginForm() {
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -92,5 +119,4 @@ const Login1 = () => {
         </ScrollToLeft>
     )
 }
-
 export default Login1

@@ -39,10 +39,10 @@ const SignUp = () => {
             initial={{ x: 50 }}
             animate={{ x: 0 }}
             transition={{ type: 'tween', duration: 0.2 }}
-            className="w-screen h-screen bg-black flex justify-content items-center p-5">
+            className="w-screen h-screen bg-signupPattern bg-center bg-no-repeat bg-cover flex justify-content items-center">
             <BackButton />
 
-            <div className="w-full flex flex-col gap-4">
+            <div className="w-full h-full flex flex-col justify-center p-5 gap-4 bg-linearGradient">
                 <p className="text-white text-4xl text-center">Create your <br /> Account</p>
 
                 <motion.form
