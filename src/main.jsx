@@ -14,6 +14,7 @@ import NotFound from './Screens/NotFound/NotFound'
 import AllSet from './Screens/Onboarding/AllSet'
 import Login1 from './Screens/Login/Login1'
 import ForgotPassword from './Screens/ForgotPassword/ForgotPassword'
+import Verification from './Screens/ForgotPassword/Verification'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -41,6 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/login'>
         <Route index element={<Login1 />} />
         <Route path='forgotpassword' element={<ForgotPassword />} />
+        <Route path='forgotpassword/verification' element={<Verification />} />
       </Route>
 
 

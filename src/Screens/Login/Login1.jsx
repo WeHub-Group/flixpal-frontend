@@ -16,6 +16,7 @@ import AppleIcon from "../../assets/images/apple.png";
 const Login1 = () => {
     const [hasLoggedIn, setHasLoggedIn] = useState(false)
 
+    // has logged in should use a session storage to find out if user has logged in
 
     return (
         <div className="">
@@ -59,8 +60,9 @@ function LoginForm() {
         alert('apple')
     }
 
-    function goToSignInPage() {
-        navigate('/login')
+    function submitForm(e) {
+        e.preventDefault()
+        alert('Logging in')
     }
 
 
@@ -78,29 +80,33 @@ function LoginForm() {
                     className="absolute bottom-0 flex flex-col gap-3 w-full p-5">
                     <p className="text-white text-4xl text-center font-extrabold">Login to your account</p>
 
-                    <NormalInput
-                        type={'email'}
-                        placeholder={'Enter your Email'}
-                        value={email}
-                        required={true}
-                        onError={() => { alert('error') }}
-                        onChanged={(e) => { setEmail(e.target.value) }}
-                    />
+                    <form onSubmit={submitForm} className='flex flex-col gap-3'>
 
-                    <PasswordInput
-                        placeholder={'Password'}
-                        value={password}
-                        required={true}
-                        onChanged={(e) => { setPassword(e.target.value) }}
-                    />
+                        <NormalInput
+                            type={'email'}
+                            placeholder={'Enter your Email'}
+                            value={email}
+                            required={true}
+                            onError={() => { alert('error') }}
+                            onChanged={(e) => { setEmail(e.target.value) }}
+                        />
+
+                        <PasswordInput
+                            placeholder={'Password'}
+                            value={password}
+                            required={true}
+                            onChanged={(e) => { setPassword(e.target.value) }}
+                        />
+
+                        <div className="flex flex-row gap-3 items-center">
+                            <input type="checkbox" className="accent-purple h-4 w-4" />
+                            <p className="text-sm text-white">Remember me</p>
+                        </div>
+
+                        <CustomButton text={'Login'} type='submit' />
+                    </form>
 
 
-                    <div className="flex flex-row gap-3 items-center">
-                        <input type="checkbox" className="accent-purple h-4 w-4" />
-                        <p className="text-sm text-white">Remember me</p>
-                    </div>
-
-                    <CustomButton text={'Login'} onPressed={goToSignInPage} />
 
 
                     <Link to={'forgotpassword'} className="text-purple text-lg text-center">Forgot Password?</Link>

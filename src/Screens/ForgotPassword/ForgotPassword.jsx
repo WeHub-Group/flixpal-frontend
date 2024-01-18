@@ -4,8 +4,11 @@ import { useState } from "react";
 import CustomButton from "../../utils/reuseable/CustomButton";
 import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 import NormalInput from "../../utils/reuseable/NormaInput";
+import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
+    const navigate = useNavigate()
+
     const [email, setEmail] = useState()
 
 
@@ -21,7 +24,8 @@ const ForgotPassword = () => {
                 </p>
 
                 <NormalInput type={'email'} value={email} onChanged={(e) => { setEmail(e.target.value) }} />
-                <CustomButton text={'Confirm Email'} />
+
+                <CustomButton text={'Confirm Email'} onPressed={() => { navigate('verification') }} />
             </div>
 
         </ScrollToLeft>
