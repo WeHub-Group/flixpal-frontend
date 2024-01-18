@@ -1,4 +1,4 @@
-# Flixpal Movie Download platform
+# GHD Movies
 Please do not make any uploads to the main branch all upload should be made to a branch under your name for easier clarification
 
 ## Installation
