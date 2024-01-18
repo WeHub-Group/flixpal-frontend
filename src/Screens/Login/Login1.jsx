@@ -19,7 +19,7 @@ const Login1 = () => {
 
     return (
         <div className="">
-            {hasLoggedIn ? <LoginDone /> : <LoginForm />}
+            {hasLoggedIn ? <LoginDone username={"username"} /> : <LoginForm />}
         </div>
     )
 }
@@ -94,6 +94,7 @@ function LoginForm() {
                         onChanged={(e) => { setPassword(e.target.value) }}
                     />
 
+
                     <div className="flex flex-row gap-3 items-center">
                         <input type="checkbox" className="accent-purple h-4 w-4" />
                         <p className="text-sm text-white">Remember me</p>
@@ -101,13 +102,16 @@ function LoginForm() {
 
                     <CustomButton text={'Login'} onPressed={goToSignInPage} />
 
+
                     <Link to={'forgotpassword'} className="text-purple text-lg text-center">Forgot Password?</Link>
+
 
                     <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">
                         <hr className="w-full" />
                         <p className="uppercase text-min w-[130%] text-center">or continue with</p>
                         <hr className="w-full" />
                     </div>
+
 
                     <div className="flex flex-row gap-2 justify-center items-center">
                         <AuthTags icon={FacebookIcon} onPressed={loginWithFacebook} />
@@ -116,7 +120,11 @@ function LoginForm() {
                     </div>
 
                     <p className="text-sm text-white text-center font-extrabold">
-                        Don&apos;t have an account? <Link to={"/signup"} className="text-purple">Sign Up</Link></p>
+                        Don&apos;t have an account?
+                        <Link to={"/signup"} className="text-purple">
+                            Sign Up
+                        </Link>
+                    </p>
                 </motion.div>
 
             </div>
