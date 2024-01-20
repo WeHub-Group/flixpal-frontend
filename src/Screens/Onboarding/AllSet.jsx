@@ -9,6 +9,10 @@ import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 const AllSet = () => {
     const navigate = useNavigate()
 
+    function done() {
+        localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
+        navigate('/home')
+    }
     return (
         <ScrollToLeft
             className="w-screen h-screen bg-black flex flex-col justify-center items-center p-5">
@@ -24,9 +28,7 @@ const AllSet = () => {
                     transition={{ duration: 1, type: 'spring' }}
                     src={AllSetIcon} className="w-64 h-64 self-center" />
 
-
-
-                <CustomButton className={'uppercase text-3xl'} text={'Go!'} onPressed={() => { alert("That's all for now") }} />
+                <CustomButton className={'uppercase text-3xl'} text={'Go!'} onPressed={done} />
             </div>
 
         </ScrollToLeft>

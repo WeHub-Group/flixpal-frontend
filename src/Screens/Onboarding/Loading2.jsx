@@ -3,6 +3,7 @@ import groupImage from '../../assets/images/loading2group.png'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../utils/reuseable/CustomButton";
+import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 
 
 
@@ -11,11 +12,8 @@ const Loading2 = () => {
 
 
     return (
-        <motion.div
-            initial={{ x: 50 }}
-            animate={{ x: 0 }}
-            transition={{ type: 'tween', duration: 0.2 }}
-            className='w-screen h-screen bg-black flex flex-col'>
+        <ScrollToLeft
+            className='w-screen h-full bg-black flex flex-col'>
 
 
             <motion.img
@@ -35,7 +33,7 @@ const Loading2 = () => {
             </div>
 
 
-        </motion.div>
+        </ScrollToLeft>
     )
 }
 

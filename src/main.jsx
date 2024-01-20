@@ -17,6 +17,8 @@ import ForgotPassword from './Screens/ForgotPassword/ForgotPassword'
 import Verification from './Screens/ForgotPassword/Verification'
 import NewPassword from './Screens/ForgotPassword/NewPassword'
 import PasswordChangeDone from './Screens/ForgotPassword/PasswordChangeDone'
+import Index from './Screens/Home/Index'
+import LoginDone from "./Screens/Login/LoginDone";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -35,14 +37,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* Signup and Verify Email routes */}
       <Route path='/signup'>
         <Route index element={<SignUp />} />
-        <Route path='verifyemail' element={<VerifyEmail />} />
-        <Route path='verifyemail/allset' element={<AllSet />} />
+        <Route path='verifyemail/:email' element={<VerifyEmail />} />
+        <Route path='verifyemail/:email/allset' element={<AllSet />} />
       </Route>
 
 
       {/* Login routes */}
       <Route path='/login'>
         <Route index element={<Login1 />} />
+        <Route path='done' element={<LoginDone />} />
       </Route>
 
       {/* Forgot Password */}
@@ -51,6 +54,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='verification/:email' element={<Verification />} />
         <Route path='change/:email' element={<NewPassword />} />
         <Route path='done' element={<PasswordChangeDone />} />
+      </Route>
+
+      {/* Home route */}
+      <Route path='/home'>
+        <Route index element={<Index />} />
       </Route>
 
 

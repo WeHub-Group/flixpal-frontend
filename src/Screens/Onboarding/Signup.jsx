@@ -11,6 +11,7 @@ import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 import { Link, useNavigate } from "react-router-dom";
+import ProgressBar from "../../utils/reuseable/ProgressBar";
 
 
 const SignUp = () => {
@@ -18,6 +19,7 @@ const SignUp = () => {
 
     // I do not know how to use react-forms sorry
     const [email, setEmail] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
     const [password, setPassword] = useState()
     const [confirmPassword, setConfirmPassword] = useState()
 
@@ -32,6 +34,12 @@ const SignUp = () => {
         alert('apple')
     }
 
+    function signupUser() {
+        // collect user details
+        setIsLoading(true)
+        navigate('verifyemail/' + email)
+
+    }
 
 
     return (
@@ -50,7 +58,7 @@ const SignUp = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: 'tween', duration: 1 }}
                     className="flex flex-col w-full gap-3"
-                    onSubmit={() => { navigate('verifyemail') }}>
+                    onSubmit={signupUser}>
 
                     <NormalInput
                         type={'email'}
@@ -81,6 +89,9 @@ const SignUp = () => {
                     </div>
 
                     <CustomButton type='submit' text={'Create Account'} />
+
+                    <ProgressBar isLoading={isLoading} />
+
 
                     <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">
                         <hr className="w-full" />

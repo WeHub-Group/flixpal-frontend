@@ -7,44 +7,13 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import NormalInput from '../../utils/reuseable/NormaInput';
 import PasswordInput from '../../utils/reuseable/PasswordInput';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AuthTags from '../../utils/reuseable/AuthTags';
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import AppleIcon from "../../assets/images/apple.png";
 
 const Login1 = () => {
-    const [hasLoggedIn, setHasLoggedIn] = useState(false)
-
-    // has logged in should use a session storage to find out if user has logged in
-
-    return (
-        <div className="">
-            {hasLoggedIn ? <LoginDone username={"username"} /> : <LoginForm />}
-        </div>
-    )
-}
-
-
-function LoginDone({ username }) {
-    const navigate = useNavigate()
-
-    setTimeout(() => {
-        navigate('#')
-    }, 2500);
-
-    return (
-        <div className="bg-black w-screen h-screen flex justify-center items-center">
-            <p className="text-white text-4xl text-center">Welcome back {username}! <br /> Glad to see you, Again!</p>
-        </div>
-    )
-}
-
-
-
-
-
-function LoginForm() {
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -62,7 +31,8 @@ function LoginForm() {
 
     function submitForm(e) {
         e.preventDefault()
-        alert('Logging in')
+        localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
+        navigate('done')
     }
 
 
@@ -138,4 +108,5 @@ function LoginForm() {
         </ScrollToLeft>
     )
 }
+
 export default Login1

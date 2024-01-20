@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import checkSvg from '../../assets/svg/check.svg'
 import CustomButton from '../../utils/reuseable/CustomButton'
+import { useNavigate } from 'react-router-dom'
 
 
 const PasswordChangeDone = () => {
+    const navigate = useNavigate()
 
     return (
         <div className='bg-black w-screen h-screen flex justify-center items-center p-5'>
@@ -19,7 +21,7 @@ const PasswordChangeDone = () => {
                 <p className="text-center text-2xl font-extrabold">Congratulations!</p>
                 <p className='text-center text-sm'>Your account ready to use. You will be redirected to the home page  </p>
 
-                <CustomButton text='Explore Now' className={'uppercase'} />
+                <CustomButton text='Explore Now' onPressed={() => { navigate('/login') }} className={'uppercase'} />
             </motion.div>
         </div >
     )
