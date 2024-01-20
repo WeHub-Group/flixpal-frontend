@@ -5,7 +5,7 @@ const CustomButton = ({ text, onPressed, className, ...props }) => {
     return (
         <button
             className={
-                `bg-purple p-3  text-white uppercase font-semibold rounded-lg text-center ${className}`
+                `bg-purple p-3 flex justify-center items-center  text-white uppercase font-semibold rounded-lg text-center ${className}`
             }
             onClick={onPressed}
             {...props}

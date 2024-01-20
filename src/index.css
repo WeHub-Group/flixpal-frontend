@@ -5,6 +5,8 @@
 #root {
     @apply bg-black text-white;
     font-family: 'Kanit';
+    width: 100vw;
+    height: 100vh;
 }
 
 @font-face {
