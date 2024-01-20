@@ -109,7 +109,7 @@ function LoginForm() {
 
 
 
-                    <Link to={'forgotpassword'} className="text-purple text-lg text-center">Forgot Password?</Link>
+                    <Link to={'/forgotpassword'} className="text-purple text-lg text-center">Forgot Password?</Link>
 
 
                     <div className="flex flex-row items-center self-stretch justify-evenly gap-4 text-white w-full">

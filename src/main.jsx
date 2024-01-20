@@ -16,6 +16,7 @@ import Login1 from './Screens/Login/Login1'
 import ForgotPassword from './Screens/ForgotPassword/ForgotPassword'
 import Verification from './Screens/ForgotPassword/Verification'
 import NewPassword from './Screens/ForgotPassword/NewPassword'
+import PasswordChangeDone from './Screens/ForgotPassword/PasswordChangeDone'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -39,12 +40,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Route>
 
 
-      {/* Login and Forgot Password routes */}
+      {/* Login routes */}
       <Route path='/login'>
         <Route index element={<Login1 />} />
-        <Route path='forgotpassword' element={<ForgotPassword />} />
+      </Route>
+
+      {/* Forgot Password */}
+      <Route path='forgotpassword'>
+        <Route index element={<ForgotPassword />} />
         <Route path='forgotpassword/verification/:email' element={<Verification />} />
         <Route path='forgotpassword/change/:email' element={<NewPassword />} />
+        <Route path='done' element={<PasswordChangeDone />} />
       </Route>
 
 
