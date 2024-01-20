@@ -48,8 +48,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* Forgot Password */}
       <Route path='forgotpassword'>
         <Route index element={<ForgotPassword />} />
-        <Route path='forgotpassword/verification/:email' element={<Verification />} />
-        <Route path='forgotpassword/change/:email' element={<NewPassword />} />
+        <Route path='verification/:email' element={<Verification />} />
+        <Route path='change/:email' element={<NewPassword />} />
         <Route path='done' element={<PasswordChangeDone />} />
       </Route>
 

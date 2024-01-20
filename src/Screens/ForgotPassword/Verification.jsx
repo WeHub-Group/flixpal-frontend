@@ -23,7 +23,7 @@ const Verification = () => {
         }
         else {
             setIsLoading(!isLoading)
-            navigate('/login/forgotpassword/change/' + email)
+            navigate('/forgotpassword/change/' + email)
         }
     }
 

@@ -14,8 +14,9 @@ export default {
         black: '#16161c',
         white: '#ffffff',
         grey: '#D9D9D9',
-        inputBackground: '#272828',
-        borderColor: '#474747'
+        darkGrey: '#272828',
+        borderColor: '#474747',
+        green: '#00AE5B'
       },
       backgroundImage: {
         loadingPattern: "url('/src/assets/images/welcome.png')",

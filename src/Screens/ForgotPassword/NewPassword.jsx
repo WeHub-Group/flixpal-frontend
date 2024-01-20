@@ -4,9 +4,11 @@ import CustomButton from "../../utils/reuseable/CustomButton"
 import ScrollToLeft from "../../utils/animations/ScrollToLeft"
 import { WiRefresh } from "react-icons/wi"
 import ProgressBar from "../../utils/reuseable/ProgressBar"
+import { useNavigate } from "react-router-dom"
 
 
 const NewPassword = () => {
+    const navigate = useNavigate()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [isLoading, setIsLoading] = useState(false)
@@ -21,6 +23,7 @@ const NewPassword = () => {
             console.log('Updating');
             setIsLoading(true)
             setMatch(true)
+            navigate('/forgotpassword/done')
         }
         else {
             setMatch(false)
