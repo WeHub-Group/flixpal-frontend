@@ -30,9 +30,6 @@ const SignUp = () => {
     function loginWithGoogle() {
         alert('google')
     }
-    function loginWithAppleId() {
-        alert('apple')
-    }
 
     function signupUser() {
         // collect user details
@@ -102,7 +99,6 @@ const SignUp = () => {
                     <div className="flex flex-row gap-2 justify-center items-center">
                         <AuthTags icon={FacebookIcon} onPressed={loginWithFacebook} />
                         <AuthTags icon={GoogleIcon} onPressed={loginWithGoogle} />
-                        <AuthTags icon={AppleIcon} onPressed={loginWithAppleId} />
                     </div>
 
                     <p className="text-sm text-white text-center font-extrabold">

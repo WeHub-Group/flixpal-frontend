@@ -24,9 +24,6 @@ const Loading2 = () => {
     function loginWithGoogle() {
         alert('google')
     }
-    function loginWithAppleId() {
-        alert('apple')
-    }
 
     function goToSignInPage() {
         navigate('/login')
@@ -50,7 +47,6 @@ const Loading2 = () => {
                     <div className="flex flex-col gap-4 justify-center">
                         <AuthButton icon={FacebookIcon} name={'Facebook'} onPressed={loginWithFacebook} />
                         <AuthButton icon={GoogleIcon} name={'Google'} onPressed={loginWithGoogle} />
-                        <AuthButton icon={AppleIcon} name={'Apple ID'} onPressed={loginWithAppleId} />
                     </div>
 
 
