@@ -3,7 +3,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
 
-const Navbar = ({ title }) => {
+const Navbar = ({ title, extra }) => {
     const navigate = useNavigate()
 
     return (
