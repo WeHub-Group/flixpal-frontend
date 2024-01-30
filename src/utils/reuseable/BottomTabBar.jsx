@@ -14,28 +14,28 @@ const BottomTabBar = () => {
     return (
         <div className='fixed bottom-0 flex flex-row text-white justify-between items-center p-4 w-screen h-16 bg-purple text-xl'>
             <img src={Home} alt=""
-                onClick={() => { alert('Home') }}
+                onClick={() => { navigate('/home') }}
                 className={location.pathname == '/home'
                     ? 'h-7 w-7 border-b-2 border-white p-1 rounded-xl' : 'h-4 w-4'
                 }
             />
 
             <img src={Bookmarks} alt=""
-                onClick={() => { alert('bookmarks') }}
-                className={location.pathname == '/'
-                    ? 'h-6 w-6' : 'h-4 w-4'
+                onClick={() => { navigate('/mylist') }}
+                className={location.pathname == '/mylist'
+                    ? 'h-7 w-7 border-b-2 border-white p-1 rounded-xl' : 'h-4 w-4'
                 } />
 
             <img src={Downloads} alt=""
-                onClick={() => { alert('downloads') }}
-                className={location.pathname == '/'
-                    ? 'h-6 w-6' : 'h-4 w-4'
+                onClick={() => { navigate('/downloads') }}
+                className={location.pathname == '/downloads'
+                    ? 'h-7 w-7 border-b-2 border-white p-1 rounded-xl' : 'h-4 w-4'
                 } />
 
             <img src={More} alt=""
-                onClick={() => { alert('more') }}
-                className={location.pathname == '/'
-                    ? 'h-6 w-6' : 'h-4 w-4'
+                onClick={() => { navigate('/more') }}
+                className={location.pathname == '/more'
+                    ? 'h-7 w-7 border-b-2 border-white p-1 rounded-xl' : 'h-4 w-4'
                 } />
         </div>
     )

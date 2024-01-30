@@ -8,7 +8,6 @@ import AuthButton from "../../utils/reuseable/AuthButtons";
 // Importing images instead
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
-import AppleIcon from "../../assets/images/apple.png";
 import CustomButton from "../../utils/reuseable/CustomButton";
 import ScrollToLeft from "../../utils/animations/ScrollToLeft";
 

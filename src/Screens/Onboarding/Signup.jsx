@@ -9,7 +9,6 @@ import AuthTags from "../../utils/reuseable/AuthTags";
 
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
-import AppleIcon from "../../assets/images/apple.png";
 import { Link, useNavigate } from "react-router-dom";
 import ProgressBar from "../../utils/reuseable/ProgressBar";
 

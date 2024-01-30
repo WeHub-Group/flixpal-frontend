@@ -1,9 +1,11 @@
 import React from 'react'
+import BottomTabBar from '../../utils/reuseable/BottomTabBar'
 
 const More = () => {
     return (
-        <div>
+        <div className='w-screen h-screen bg-white'>
 
+            <BottomTabBar />
         </div>
     )
 }

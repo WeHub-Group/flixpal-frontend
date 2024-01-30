@@ -7,11 +7,10 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import NormalInput from '../../utils/reuseable/NormaInput';
 import PasswordInput from '../../utils/reuseable/PasswordInput';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import AuthTags from '../../utils/reuseable/AuthTags';
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
-import AppleIcon from "../../assets/images/apple.png";
 
 const Login1 = () => {
     const navigate = useNavigate()

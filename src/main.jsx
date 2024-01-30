@@ -19,6 +19,9 @@ import NewPassword from './Screens/ForgotPassword/NewPassword'
 import PasswordChangeDone from './Screens/ForgotPassword/PasswordChangeDone'
 import Index from './Screens/Home/Index'
 import LoginDone from "./Screens/Login/LoginDone";
+import MyList from './Screens/MyList/MyList'
+import Download from './Screens/Dowmload/Download'
+import More from './Screens/More/More'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -59,6 +62,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* Home route */}
       <Route path='/home'>
         <Route index element={<Index />} />
+      </Route>
+
+      {/* My Movies List route*/}
+      <Route path='/mylist'>
+        <Route index element={<MyList />} />
+      </Route>
+
+
+      {/* Downloads route */}
+      <Route path='/downloads'>
+        <Route index element={<Download />} />
+      </Route>
+
+      {/* More route */}
+      <Route path='/more'>
+        <Route index element={<More />} />
       </Route>
 
 

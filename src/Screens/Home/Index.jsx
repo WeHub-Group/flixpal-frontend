@@ -1,10 +1,10 @@
-import ScrollToTop from "../../utils/animations/ScrollToTop"
 import BottomTabBar from "../../utils/reuseable/BottomTabBar"
+import Searchbar from "../../utils/reuseable/Searchbar"
 
 
 const Index = () => {
     return (
-        <ScrollToTop className='w-screen h-screen bg-black'>
+        <div className='w-screen h-screen bg-black flex flex-col'>
             {/* Top NavBar */}
             <div className="p-4 flex flex-row items-center gap-3">
 
@@ -18,8 +18,29 @@ const Index = () => {
                 </div>
             </div>
 
+
+            {/* Active Search bar */}
+            <div className="flex justify-center items-center">
+                <Searchbar />
+            </div>
+
+            {/* Movie Carousel */}
+            <div className="w-full h-full flex flex-col">
+            </div>
+
+
+            {/* Latest Shows */}
+            <div className="w-full h-[55%] flex flex-col p-3">
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+
+            {/* ______ */}
+            <div className="w-full h-[55%] flex flex-col p-3 mb-16">
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+
             <BottomTabBar />
-        </ScrollToTop>
+        </div>
     )
 }
 
