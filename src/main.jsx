@@ -20,7 +20,7 @@ import PasswordChangeDone from './Screens/ForgotPassword/PasswordChangeDone'
 import Index from './Screens/Home/Index'
 import LoginDone from "./Screens/Login/LoginDone";
 import MyList from './Screens/MyList/MyList'
-import Download from './Screens/Dowmload/Download'
+import Download from './Screens/Download/Download'
 import More from './Screens/More/More'
 import LatestShows from './Screens/Home/LatestShows'
 import TrendingNow from './Screens/Home/TrendingNow'
