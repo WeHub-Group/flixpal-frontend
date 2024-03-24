@@ -2,7 +2,7 @@
     {
         "id": "12918298138238283",
         "name": "Spiderman 3",
-        "cover": "../../assets/images/signup.jpg",
+        "cover": "/src/assets/images/login.jpg",
         "rating": "4",
         "category": "Action",
         "description": "Lorem ipsum dolor init description"
@@ -10,17 +10,65 @@
     {
         "id": "12918298138238293",
         "name": "Spiderman 2",
-        "cover": "../../assets/images/signup.jpg",
+        "cover": "/src/assets/images/signup.jpg",
         "rating": "5",
         "category": "Action",
         "description": "Lorem ipsum dolor init description"
     },
     {
-        "id": "12918298138238295",
+        "id": "12918298138238235",
         "name": "The Nun 2",
-        "cover": "../../assets/images/signup.jpg",
+        "cover": "/src/assets/images/signup.jpg",
         "rating": "5",
         "category": "Horror",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238223",
+        "name": "Spiderman 3",
+        "cover": "/src/assets/images/login.jpg",
+        "rating": "4",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238263",
+        "name": "Spiderman 2",
+        "cover": "/src/assets/images/signup.jpg",
+        "rating": "5",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238231",
+        "name": "John Wick 1",
+        "cover": "/src/assets/images/signup.jpg",
+        "rating": "3",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238241",
+        "name": "John Wick 2",
+        "cover": "/src/assets/images/signup.jpg",
+        "rating": "3",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238251",
+        "name": "John Wick 3",
+        "cover": "/src/assets/images/signup.jpg",
+        "rating": "3",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238221",
+        "name": "John Wick 4",
+        "cover": "/src/assets/images/signup.jpg",
+        "rating": "3",
+        "category": "Action",
         "description": "Lorem ipsum dolor init description"
     }
 ]

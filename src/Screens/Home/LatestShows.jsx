@@ -1,6 +1,7 @@
 import Navbar from "../../utils/reuseable/Navbar"
 import { FaSearch } from 'react-icons/fa'
 import ScrollToLeft from '../../utils/animations/ScrollToLeft'
+import ListWrapper from "../../utils/reuseable/ListWrapper"
 
 
 const LatestShows = () => {
@@ -10,6 +11,7 @@ const LatestShows = () => {
                 extra={
                     < div > <FaSearch /> </div >
                 } />
+            <ListWrapper direction={'vertical'} />
 
 
         </ScrollToLeft >
