@@ -1,0 +1,26 @@
+[
+    {
+        "id": "12918298138238283",
+        "name": "Spiderman 3",
+        "cover": "../../assets/images/signup.jpg",
+        "rating": "4",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238293",
+        "name": "Spiderman 2",
+        "cover": "../../assets/images/signup.jpg",
+        "rating": "5",
+        "category": "Action",
+        "description": "Lorem ipsum dolor init description"
+    },
+    {
+        "id": "12918298138238295",
+        "name": "The Nun 2",
+        "cover": "../../assets/images/signup.jpg",
+        "rating": "5",
+        "category": "Horror",
+        "description": "Lorem ipsum dolor init description"
+    }
+]

@@ -1,8 +1,12 @@
 import BottomTabBar from "../../utils/reuseable/BottomTabBar"
+import ListWrapper from "../../utils/reuseable/ListWrapper"
+import Movie from "../../utils/reuseable/Movie"
 import Searchbar from "../../utils/reuseable/Searchbar"
 import { FaBell } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
+// Useless TEST Import 
+import image1 from "../../assets/images/signup.jpg"
 
 const Index = () => {
     return (
@@ -19,7 +23,7 @@ const Index = () => {
                         <p className="font-extrabold">
                             Welcome back,
                         </p>
-                        <p>{12902292920}</p>
+                        <p>{'Travis'}</p>
                     </div>
                 </div>
 
@@ -33,24 +37,29 @@ const Index = () => {
             </div>
 
             {/* Movie Carousel */}
-            <div className="w-full h-full flex flex-col">
+            <div className="w-full h-[60%] flex flex-col">
             </div>
 
 
             {/* Latest Shows */}
-            <div className="w-full h-[55%] flex flex-col p-3">
+            <div className="w-full h-[30%] flex flex-col p-3">
                 <div className="flex w-full justify-between items-center">
                     <p className="text-lg font-semibold">Latest Shows</p>
                     <Link to={'latestshows'} className="text-min underline">Show all</Link>
                 </div>
+
+                <ListWrapper />
             </div>
 
-            {/* ______ */}
-            <div className="w-full h-[55%] flex flex-col p-3 mb-16">
+
+            {/* Trending Now */}
+            <div className="w-full h-[30%] flex flex-col p-3 mb-16">
                 <div className="flex w-full justify-between items-center">
                     <p className="text-lg font-semibold">Trending Now</p>
                     <Link to={'trendingnow'} className="text-min underline">Show all</Link>
                 </div>
+
+                <ListWrapper />
             </div>
 
             <BottomTabBar />

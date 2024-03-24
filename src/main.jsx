@@ -25,6 +25,7 @@ import More from './Screens/More/More'
 import LatestShows from './Screens/Home/LatestShows'
 import TrendingNow from './Screens/Home/TrendingNow'
 import Notifications from './Screens/Home/Notifications'
+import MovieDetail from './Screens/Home/MovieDetail'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -65,6 +66,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* Home route */}
       <Route path='/home'>
         <Route index element={<Index />} />
+        <Route path=':moviename' element={<MovieDetail />} />
         <Route path='latestshows' element={<LatestShows />} />
         <Route path='trendingnow' element={<TrendingNow />} />
         <Route path='notifications' element={<Notifications />} />
