@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import sendIcon from '../../assets/svg/Send_fill.svg'
 
-const NormalInput = ({ type, placeholder, value, onChanged, ...props }) => {
+const NormalInput = ({ type, placeholder, icon, value, onChanged, ...props }) => {
+
     return (
         <div className='w-full p-3 rounded-lg bg-darkGrey flex flex-row gap-3 items-center'>
-            <img src={sendIcon} className="text-white bg-none text-lg h-6 w-6" />
+            {
+                icon
+            }
             <input type={type}
                 autoComplete=''
                 placeholder={placeholder}

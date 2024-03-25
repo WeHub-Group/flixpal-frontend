@@ -11,7 +11,7 @@ const AllSet = () => {
 
     function done() {
         localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
-        navigate('/home')
+        navigate('/signup/accountsetup')
     }
     return (
         <ScrollToLeft

@@ -26,6 +26,7 @@ import LatestShows from './Screens/Home/LatestShows'
 import TrendingNow from './Screens/Home/TrendingNow'
 import Notifications from './Screens/Home/Notifications'
 import MovieDetail from './Screens/Home/MovieDetail'
+import AccountSetup1 from './Screens/AccountSetup/AccountSetup1'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -46,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route index element={<SignUp />} />
         <Route path='verifyemail/:email' element={<VerifyEmail />} />
         <Route path='verifyemail/:email/allset' element={<AllSet />} />
+        <Route path='accountsetup' element={<AccountSetup1 />} />
       </Route>
 
 

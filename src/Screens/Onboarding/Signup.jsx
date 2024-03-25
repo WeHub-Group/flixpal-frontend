@@ -2,7 +2,7 @@ import { useState } from "react";
 import BackButton from "../../utils/reuseable/BackButton";
 import CustomButton from "../../utils/reuseable/CustomButton";
 import NormalInput from "../../utils/reuseable/NormaInput";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaMailBulk, FaMailchimp, FaTelegramPlane } from "react-icons/fa";
 import PasswordInput from "../../utils/reuseable/PasswordInput";
 import { motion } from "framer-motion";
 import AuthTags from "../../utils/reuseable/AuthTags";
@@ -11,6 +11,8 @@ import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
 import { Link, useNavigate } from "react-router-dom";
 import ProgressBar from "../../utils/reuseable/ProgressBar";
+import UsernameIcon from '../../utils/reuseable/UsernameIcon'
+
 
 
 const SignUp = () => {
@@ -62,6 +64,7 @@ const SignUp = () => {
 
                     {/* Email */}
                     <NormalInput
+                        icon={<UsernameIcon />}
                         type={'email'}
                         placeholder={'Enter your Email'}
                         value={email}

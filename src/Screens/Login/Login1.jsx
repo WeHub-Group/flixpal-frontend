@@ -11,6 +11,8 @@ import { useState } from 'react';
 import AuthTags from '../../utils/reuseable/AuthTags';
 import FacebookIcon from "../../assets/images/facebook.png";
 import GoogleIcon from "../../assets/images/google.png";
+import UsernameIcon from '../../utils/reuseable/UsernameIcon'
+
 
 const Login1 = () => {
     const navigate = useNavigate()
@@ -52,6 +54,7 @@ const Login1 = () => {
                             type={'email'}
                             placeholder={'Enter your Email'}
                             value={email}
+                            icon={<UsernameIcon />}
                             required={true}
                             onError={() => { alert('error') }}
                             onChanged={(e) => { setEmail(e.target.value) }}
