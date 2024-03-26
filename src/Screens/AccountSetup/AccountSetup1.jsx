@@ -13,15 +13,22 @@ const AccountSetup1 = () => {
     const [username, setUsername] = useState("")
     const [telephone, setTelephone] = useState("")
     const [dob, setDob] = useState("")
-    const [sex, setSex] = useState("")
-
+    const [sex, setSex] = useState(undefined)
+    const sexOptions = [
+        'Male',
+        'Female',
+        'Custom'
+    ];
+    const onSexChangedListener = (e) => {
+        setSex(e.target.value);
+    };
 
 
     function done() {
-        // localStorage.setItem(import.meta.env.VITE_USER_USERNAME, username)
-        // localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
+        localStorage.setItem(import.meta.env.VITE_USER_USERNAME, username)
+        localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
         console.log(username, telephone, dob, sex);
-        // navigate('/home')
+        navigate('/home')
     }
 
     return (
@@ -37,11 +44,17 @@ const AccountSetup1 = () => {
                 <NormalInput type={'date'} icon={<FaCalendar />} placeholder={'Birth Date'} value={dob} onChanged={(e) => { setDob(e.target.value) }} />
 
                 {/* select option */}
-                <select className="w-full p-3 rounded-lg bg-darkGrey flex flex-row gap-3 items-center outline-none" value={sex} onSelectCapture={(e) => { setSex(e.target.value) }}>
-                    <option value="Male">Male</option>
-                    <option value="Femal">Female</option>
-                    <option value="Custom">Custom</option>
+                <select className="w-full p-3 rounded-lg bg-darkGrey flex flex-row gap-3 items-center outline-none" onChange={onSexChangedListener}>
+                    <option>Please choose one option</option>
+                    {sexOptions.map((option, index) => {
+                        return (
+                            <option key={index}>
+                                {option}
+                            </option>
+                        );
+                    })}
                 </select>
+
                 <CustomButton text={'Done'} onPressed={done} />
             </div>
 
