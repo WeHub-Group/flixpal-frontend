@@ -6,6 +6,7 @@ import NormalInput from "../../utils/reuseable/NormaInput"
 import UsernameIcon from '../../utils/reuseable/UsernameIcon'
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import ProgressBar from "../../utils/reuseable/ProgressBar";
 
 const AccountSetup1 = () => {
     const navigate = useNavigate()
@@ -14,6 +15,7 @@ const AccountSetup1 = () => {
     const [telephone, setTelephone] = useState("")
     const [dob, setDob] = useState("")
     const [sex, setSex] = useState(undefined)
+    const [loading, setLoading] = useState(false)
     const sexOptions = [
         'Male',
         'Female',
@@ -25,10 +27,13 @@ const AccountSetup1 = () => {
 
 
     function done() {
-        localStorage.setItem(import.meta.env.VITE_USER_USERNAME, username)
-        localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
-        console.log(username, telephone, dob, sex);
-        navigate('/home')
+        setLoading(true)
+        setTimeout(() => {
+            localStorage.setItem(import.meta.env.VITE_USER_USERNAME, username)
+            localStorage.setItem(import.meta.env.VITE_HAS_LOGGED_IN, true)
+            console.log(username, telephone, dob, sex);
+            navigate('/home')
+        }, 2000);
     }
 
     return (
@@ -56,6 +61,8 @@ const AccountSetup1 = () => {
                 </select>
 
                 <CustomButton text={'Done'} onPressed={done} />
+
+                <ProgressBar isLoading={loading} />
             </div>
 
         </ScrollToLeft>
