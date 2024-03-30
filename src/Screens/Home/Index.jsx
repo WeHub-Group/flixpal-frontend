@@ -7,8 +7,13 @@ import { Link } from "react-router-dom"
 
 // Useless TEST Import 
 import image1 from "../../assets/images/signup.jpg"
+import { useState } from "react"
 
 const Index = () => {
+
+    const [username, setUsername] = useState('placeholder')
+
+
     return (
         <div className='w-screen h-screen bg-black flex flex-col'>
             {/* Top NavBar */}
